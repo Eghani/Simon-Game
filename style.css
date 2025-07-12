@@ -1,0 +1,139 @@
+/* Responsive 2x2 Button Matrix */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.btn {
+  margin: 18px;
+  display: inline-block;
+  height: 120px;
+  width: 120px;
+  border: 10px solid black;
+  border-radius: 20%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90vw;
+    max-width: 400px;
+    min-width: 0;
+  }
+  .btn {
+    height: 90px;
+    width: 90px;
+    margin: 10px;
+    border-width: 7px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 98vw;
+    max-width: 320px;
+    min-width: 0;
+    padding: 0;
+  }
+  .row {
+    width: 100%;
+  }
+  .btn {
+    height: 240px;
+    width: 240px;
+    margin: 30px;
+    border-width: 4px;
+  }
+}
+/* Rules Dropdown Effect */
+.rules-dropdown ul {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
+  margin-bottom: 0;
+}
+.rules-dropdown ul[style*="max-height: 0"] {
+  pointer-events: none;
+}
+.rules-dropdown ul[style*="max-height"] {
+  margin-top: 0;
+}
+.rules-dropdown h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container h2 {
+  font-family: "Press Start 2P", cursive;
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #011f3f44;
+}
+.container ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.container ul li {
+  font-family: "Press Start 2P", cursive;
+  color: #fef2bf;
+  background: #02203a;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s, color 0.2s;
+}
+.container ul li:last-child {
+  margin-bottom: 0;
+}
+body {
+  text-align: center;
+  background-color: #011f3f;
+}
+
+#level-title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 3rem;
+  margin: 5%;
+  color: #fef2bf;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
